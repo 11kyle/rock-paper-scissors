@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rock-paper-scissors/static/css/main.d9cc4314.css",
-    "main.js": "/rock-paper-scissors/static/js/main.09467c09.js",
+    "main.css": "/rock-paper-scissors/static/css/main.10fcdfd6.css",
+    "main.js": "/rock-paper-scissors/static/js/main.81d97cf5.js",
     "static/js/787.c8ffd4a8.chunk.js": "/rock-paper-scissors/static/js/787.c8ffd4a8.chunk.js",
     "static/media/logo.svg": "/rock-paper-scissors/static/media/logo.a4a2b39fefcdb6a1a8088c4dba8f3d93.svg",
     "static/media/image-rules.svg": "/rock-paper-scissors/static/media/image-rules.258b753fb6284dc8ae00c5b2fa7938c0.svg",
@@ -10,13 +10,12 @@
     "static/media/icon-scissors.svg": "/rock-paper-scissors/static/media/icon-scissors.3b1a5d7eb0b2f1fd3e955865ec04d9ed.svg",
     "static/media/icon-rock.svg": "/rock-paper-scissors/static/media/icon-rock.476e90a9646a87bb3645d2f09f4f7fba.svg",
     "static/media/icon-close.svg": "/rock-paper-scissors/static/media/icon-close.bde602ecd1a4e55e0c27137ed651e027.svg",
-    "static/media/bg-triangle.svg": "/rock-paper-scissors/static/media/bg-triangle.77c6ca418d3751d8f717.svg",
-    "main.d9cc4314.css.map": "/rock-paper-scissors/static/css/main.d9cc4314.css.map",
-    "main.09467c09.js.map": "/rock-paper-scissors/static/js/main.09467c09.js.map",
+    "main.10fcdfd6.css.map": "/rock-paper-scissors/static/css/main.10fcdfd6.css.map",
+    "main.81d97cf5.js.map": "/rock-paper-scissors/static/js/main.81d97cf5.js.map",
     "787.c8ffd4a8.chunk.js.map": "/rock-paper-scissors/static/js/787.c8ffd4a8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9cc4314.css",
-    "static/js/main.09467c09.js"
+    "static/css/main.10fcdfd6.css",
+    "static/js/main.81d97cf5.js"
   ]
 }
