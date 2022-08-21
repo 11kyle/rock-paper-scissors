@@ -1,18 +1,20 @@
 // Used to generate a number from 0 to max
-const randomNumber = (max) => {
-  return Math.floor(Math.random() * (max + 1));
+export const getRandomNumber = (max) => {
+  return Math.floor(Math.random() * max);
 }
 
 var score = 0;
-var gameOutcome = "";
+var gameOutcome = ""; 
+var housePicked = "";
 
 // Game
 export function game(playerPicked) {
   // Variables
   const outcomes = ["rock", "paper", "scissors"];
-  const housePicked = outcomes[randomNumber(outcomes.length)]; 
+  housePicked = outcomes[getRandomNumber(outcomes.length)]; 
 
   console.log(`player pick ${playerPicked}`);
+  console.log(`house picked ${housePicked}`);
 
   function logic(playerPicked, housePicked) {
     if (playerPicked === housePicked) {
@@ -67,12 +69,15 @@ export function game(playerPicked) {
   }
 
   logic(playerPicked, housePicked);
-  
-  console.log(score);
 
   return gameOutcome;
+
 }
 
 export function getScore() {
   return score;
+}
+
+export function getHousePicked() {
+  return housePicked;
 }

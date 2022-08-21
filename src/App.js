@@ -12,7 +12,7 @@ function App() {
 
   // space-around or space-between
   return (
-    <div className="flex flex-col justify-between items-center w-screen h-screen bg-gradient-to-b from-hslBackgroundTop to-hslBackgroundBottom">
+    <div className="flex flex-col justify-between items-center w-screen min-h-screen bg-gradient-to-b from-hslBackgroundTop to-hslBackgroundBottom">
       <Header score={score} />
       <Game setScore={setScore} />
       <button className="border-2 border-white rounded-md uppercase text-white px-9 py-2 mb-20" onClick={handleOpen}>Rules</button>
