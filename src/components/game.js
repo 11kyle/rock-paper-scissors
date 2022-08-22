@@ -7,22 +7,25 @@ import { game, getScore, getHousePicked } from '../ultils/app';
 const outcomes = [
   {
     value: "rock",
-    image: iconRock
+    image: iconRock,
+    styles: "bg-gradient-to-b from-hslRockTop to-hslRockBottom shadow-[0px_5px_0px_0px_rgba(220,46,78,0.8)]"
   },
   {
     value: "paper",
-    image: iconPaper
+    image: iconPaper,
+    styles: "bg-gradient-to-b from-hslPaperTop to-hslPaperBottom shadow-[0px_5px_0px_0px_rgba(72,101,244,0.8)]"
   },
   {
     value: "scissors",
-    image: iconScissors
+    image: iconScissors,
+    styles: "bg-gradient-to-b from-hslScissorsTop to-hslScissorsBottom shadow-[0px_5px_0px_0px_rgba(236,158,14,0.8)]"
   }
 ];
 
 // Need to add a value, name or id to the button to determine if it is rock, paper or scissors, currently working with props.alt
 const Button = (props) => {
   return (
-    <button className="bg-white w-24 h-24 md:w-40 md:h-40 flex justify-center items-center rounded-full" disabled={props.isDisabled} onClick={() => props.handleClick(props.alt)}>
+    <button className="bg-white w-24 h-24 md:w-40 md:h-40 flex justify-center items-center rounded-full shadow-[inset_0px_5px_0px_0px_rgba(211,211,211,0.8)]" disabled={props.isDisabled} onClick={() => props.handleClick(props.alt)}>
       <img className="md:w-24 md:h-24" src={props.src} alt={props.alt} />
     </button>
   );
@@ -36,7 +39,7 @@ const Compare = ({ playAgain, gameOutcome, playerSelection, houseSelection }) =>
   const [item2, setItem2] = useState(outcomes.find(obj => obj.value === houseSelection));
   
   const [isLoading, setIsLoading] = useState(true);
-
+  console.log(item.styles);
 
   useEffect(() => {
     // Prevent component from displaying without the correct button image first
@@ -51,11 +54,11 @@ const Compare = ({ playAgain, gameOutcome, playerSelection, houseSelection }) =>
         <>
           <div className="grid grid-cols-5 gap-4 max-w-md md:max-w-3xl">
 
-            <div className="shadow-[0px_5px_0px_0px_rgba(72,101,244,0.8)] col-start-2 justify-self-center w-[120px] h-[120px] md:w-[200px] md:h-[200px] flex justify-center items-center rounded-full bg-gradient-to-b from-hslPaperTop to-hslPaperBottom">
+            <div className={`col-start-2 justify-self-center w-[120px] h-[120px] md:w-[200px] md:h-[200px] flex justify-center items-center rounded-full ${item.styles}`}>
               <Button src={item.image} alt={item.value} isDisabled={true} />
             </div>
 
-            <div className="shadow-[0px_5px_0px_0px_rgba(236,158,14,0.8)] col-start-4 justify-self-center w-[120px] h-[120px] md:w-[200px] md:h-[200px] flex justify-center items-center rounded-full bg-gradient-to-b from-hslScissorsTop to-hslScissorsBottom">
+            <div className={`col-start-4 justify-self-center w-[120px] h-[120px] md:w-[200px] md:h-[200px] flex justify-center items-center rounded-full ${item2.styles}`}>
               <Button src={item2.image} alt={item2.value} isDisabled={true} />
             </div>
 
@@ -68,7 +71,7 @@ const Compare = ({ playAgain, gameOutcome, playerSelection, houseSelection }) =>
           </div>
           <div className="text-center">
             <h1 className="uppercase font-bold text-white text-[56px] my-4">You {gameOutcome}</h1>
-            <button className="uppercase font-semibold bg-white text-hslDarkText w-full rounded-md py-2" onClick={() => playAgain(false)}>Play Again</button>
+            <button className="uppercase font-semibold bg-white text-hslDarkText w-full rounded-md hover:text-hslRockBottom py-2" onClick={() => playAgain(false)}>Play Again</button>
           </div>
         </>
       }

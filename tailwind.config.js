@@ -16,7 +16,9 @@ module.exports = {
           'hslPaperTop': 'hsl(230, 89%, 62%)',
           'hslPaperBottom': 'hsl(230, 89%, 65%)',
           'hslRockTop': 'hsl(349, 71%, 52%)',
-          'hslRockBottom': 'hsl(349, 70%, 56%)'
+          'hslRockBottom': 'hsl(349, 70%, 56%)',
+          'hslCyanTop': 'hsl(189, 59%, 53%)',
+          'hslCyanBottom': 'hsl(189, 58%, 57%)'
         },
         backgroundImage: {
           'triangle': "url('/src/assets/bg-triangle.svg')"
