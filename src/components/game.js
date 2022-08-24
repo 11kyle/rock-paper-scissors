@@ -99,7 +99,7 @@ export default function Game({ setScore }) {
   }
 
   return (
-    <>
+    <main>
       {isGameOver
         ? <Compare playAgain={setIsGameOver} gameOutcome={gameOutcome} playerSelection={playerSelection} houseSelection={houseSelection} />
         : <div className="grid grid-cols-5 gap-y-10 max-w-md md:max-w-3xl">
@@ -114,6 +114,6 @@ export default function Game({ setScore }) {
             </div>
           </div>
       }
-    </>
+    </main>
   );
 }
